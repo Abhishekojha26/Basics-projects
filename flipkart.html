@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        .product-card {
+            min-width: 150px;
+            max-width: 200px;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .scroll-container {
+            overflow-x: auto;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+        }
+        .scroll-container::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="w-full bg-white shadow-md rounded-b-lg mb-4">
+        <div class="container mx-auto p-4 flex items-center justify-between space-x-4">
+            <!-- Flipkart Logo Section -->
+            <div class="flex-shrink-0 flex items-end">
+                <a href="#" class="text-2xl font-bold text-blue-600">Flipkart</a>
+                <a href="#" class="ml-1 text-xs text-gray-900 font-medium whitespace-nowrap flex items-center">
+                    Explore
+                    <span class="text-yellow-500 font-extrabold ml-1">Plus</span>
+                    <i class="fas fa-plus text-yellow-500 text-xs ml-0.5" style="font-size: 8px;"></i>
+                </a>
+            </div>
+
+            <!-- Search Bar Section -->
+            <div class="flex-grow max-w-xl mx-auto">
+                <div class="relative w-full">
+                    <input type="text" placeholder="Search for Products, Brands and More" class="w-full bg-gray-100 border border-transparent rounded-lg py-2 pl-12 pr-4 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                    <i class="fas fa-search text-gray-500 absolute left-4 top-1/2 transform -translate-y-1/2"></i>
+                </div>
+            </div>
+
+            <!-- Navigation Links Section -->
+            <div class="flex items-center space-x-6 text-sm font-medium text-gray-800 flex-shrink-0">
+                <a href="#" class="flex items-center space-x-2 whitespace-nowrap group">
+                    <i class="fas fa-user-circle text-xl text-blue-600 transition-transform duration-300 group-hover:scale-110"></i>
+                    <span class="hidden md:inline">Login</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 whitespace-nowrap group">
+                    <i class="fas fa-shopping-cart text-xl text-blue-600 transition-transform duration-300 group-hover:scale-110"></i>
+                    <span class="hidden md:inline">Cart</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 whitespace-now-wrap group">
+                    <i class="fas fa-store text-xl text-blue-600 transition-transform duration-300 group-hover:scale-110"></i>
+                    <span class="hidden md:inline">Become a Seller</span>
+                </a>
+                <a href="#" class="flex items-center group">
+                    <i class="fas fa-ellipsis-v text-xl text-gray-600 transition-transform duration-300 group-hover:scale-110"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4">
+        <!-- Category Bar Section -->
+        <div class="bg-white p-4 rounded-lg shadow-md mb-4 flex justify-around items-center space-x-2 overflow-x-auto scroll-container">
+            <div class="flex flex-col items-center">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/e00302d428f5c7be.png?q=100" alt="Top Deals" class="rounded-full w-12 h-12">
+                <span class="mt-2 text-xs text-center">Top Deals</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/5f2ee7f883cdb774.png?q=100" alt="Mobiles" class="rounded-full w-12 h-12">
+                <span class="mt-2 text-xs text-center">Mobiles</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://placehold.co/60x60/d4d4d8/27272a?text=Electronics" alt="Electronics" class="rounded-full w-12 h-12">
+                <span class="mt-2 text-xs text-center">Electronics</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://placehold.co/60x60/d4d4d8/27272a?text=Fashion" alt="Fashion" class="rounded-full w-12 h-12">
+                <span class="mt-2 text-xs text-center">Fashion</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/e90944802d996756.jpg?q=100" alt="Appliances" class="rounded-full w-12 h-12">
+                <span class="mt-2 text-xs text-center">Appliances</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://placehold.co/60x60/d4d4d8/27272a?text=Home" alt="Home" class="rounded-full w-12 h-12">
+                <span class="mt-2 text-xs text-center">Home</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/3c647c2e0d937dc5.png?q=100" alt="Travel" class="rounded-full w-12 h-12">
+                <span class="mt-2 text-xs text-center">Travel</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="data:image/webp;base64,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" alt="Toys" class="rounded-full w-12 h-12">
+                <span class="mt-2 text-xs text-center">Toys</span>
+            </div>
+        </div>
+
+        <!-- Main Banner -->
+        <div class="relative w-full rounded-lg overflow-hidden shadow-lg mb-4">
+            <img src="https://placehold.co/1200x300/60a5fa/fff?text=Exclusive+Banner+Deal" alt="Banner" class="w-full h-auto">
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full w-8 h-8 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full w-8 h-8 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Product Carousel Section -->
+        <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+            <h2 class="text-xl font-bold mb-4">Best of Electronics</h2>
+            <div class="flex space-x-4 scroll-container">
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim2.flixcart.com/image/120/120/xif0q/water-geyser/m/9/7/-original-imahd77j8jh7hmge.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">Home Essentials</span>
+                    <span class="text-xs text-green-500 font-medium">Shop Now!</span>
+                </div>
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim2.flixcart.com/image/120/120/xif0q/projector/q/7/6/i9-pro-10-ei9027-led-projector-egate-original-imah5e3bggu5qcgp.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">Projector</span>
+                    <span class="text-xs text-gray-600">From ₹9999</span>
+                </div>
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim2.flixcart.com/image/120/120/kcf4lu80/speaker/mobile-tablet-speaker/h/u/f/srs-xb23-sony-original-imaftk66vjxp86h5.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">Best Selling Mobile</span>
+                    <span class="text-xs text-gray-600">From ₹12999</span>
+                </div>
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim2.flixcart.com/image/120/120/xif0q/monitor/f/0/f/-original-imagwwcxv9cqds7d.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">Monitors</span>
+                    <span class="text-xs text-gray-600">From ₹5999</span>
+                </div>
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim2.flixcart.com/image/120/120/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">Smartwatch</span>
+                    <span class="text-xs text-gray-600">From ₹1299</span>
+                </div>
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim1.flixcart.com/image/120/120/kx50gi80/pen/h/z/k/119766-flair-original-imag9nzubznagufg.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">Stationary</span>
+                    <span class="text-xs text-gray-600">From ₹1999</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Another Product Section -->
+        <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+            <h2 class="text-xl font-bold mb-4">Beauty, Food, Toys & more</h2>
+            <div class="flex space-x-4 scroll-container">
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim1.flixcart.com/image/120/120/k0plpjk0/remote-control-toy/9/g/k/4-function-remote-control-high-speed-big-racing-car-toy-funkey-original-imafkg33umd8dy93.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">Soft Toys</span>
+                    <span class="text-xs text-gray-600">Upto 70% Off</span>
+                </div>
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim1.flixcart.com/image/120/120/kzzw5u80/coffee/s/b/x/-original-imagbwf3wvhzfh5z.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">Coffee Powder</span>
+                    <span class="text-xs text-gray-600">Upto 60% Off</span>
+                </div>
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim1.flixcart.com/image/120/120/l111lzk0/cycle/m/r/e/xc-900-grey-lite-26-15-5-cradiac-21-gear-120-original-imagczuzpxeweczm.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">Geared Cycles</span>
+                    <span class="text-xs text-gray-600">Upto 70% Off</span>
+                </div>
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim1.flixcart.com/image/120/120/xif0q/shoe/m/l/m/-original-imahddyzhk9mqnw6.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">PUMA, ADIDAS..</span>
+                    <span class="text-xs text-gray-600">Min. 60% Off</span>
+                </div>
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim1.flixcart.com/image/120/120/k6fd47k0/nut-dry-fruit/p/z/7/200-100-natural-california-pouch-happilo-original-imafzvw2tcazeur6.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">Health Supplements</span>
+                    <span class="text-xs text-gray-600">Upto 70% Off</span>
+                </div>
+                <div class="product-card flex flex-col items-center text-center">
+                    <img src="https://rukminim1.flixcart.com/image/120/120/kzegk280/action-figure/9/v/t/3-30155-mcfarlane-2-5-original-imagbeyyzehpyk2m.jpeg?q=80" alt="Product" class="rounded-lg mb-2">
+                    <span class="text-sm font-semibold">Remote Control Toys</span>
+                    <span class="text-xs text-gray-600">Up to 80% Off</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
