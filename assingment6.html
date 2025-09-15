@@ -1,0 +1,29 @@
+
+<script>
+
+  let numbers = Array.from({length: 20}, (_, i) => i + 1);
+
+  let evens = numbers.filter(n => n % 2 === 0);
+  let odds  = numbers.filter(n => n % 2 !== 0);
+
+  document.write("<h3>Even Numbers</h3>");
+  document.write("<table border='1' cellspacing='0' cellpadding='5'>");
+  document.write("<tr><th>Even</th></tr>");
+  evens.forEach(num => {
+    document.write("<tr><td>" + num + "</td></tr>");
+  });
+  document.write("</table>");
+
+  document.write("<h3>Odd Numbers</h3>");
+  document.write("<table border='1' cellspacing='0' cellpadding='5'>");
+  document.write("<tr><th>Odd</th></tr>");
+  odds.forEach(num => {
+    document.write("<tr><td>" + num + "</td></tr>");
+  });
+  document.write("</table>");
+
+  
+  document.write("<h3>Total Even Numbers: " + evens.length + "</h3>");
+  document.write("<h3>Total Odd Numbers: " + odds.length + "</h3>");
+</script>
+
